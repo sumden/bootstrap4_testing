@@ -22,7 +22,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="container-fluid myphoto-section bg-myphoto-dark">
 		<div class="container-fluid">
 			<div class="row">
@@ -52,7 +52,7 @@
 					</div>
 				</div>
 				<div role="tabpanel" class="tab-pane" id="services-prints">
-					<div class="m-x-auto" style="width: 50%">
+					<div class="m-auto" style="width: 50%">
 						<h1 class="bg-primary text-center">Special Offers</h1>
 					</div>
 					<div class="container">
@@ -171,9 +171,42 @@
 			</div>
 		</div>
 	</div>
-	<div class="container-fluid myphoto-section bg-myphoto-light">
-		<div class="row">
+	<div class="container-fluid myphoto-section bg-myphoto-light"
+		id="gallery">
+		<div class="container">
 			<h3>Gallery</h3>
+			<div id="gallery-carousel" class="carousel slide"
+				data-ride="carousel" data-interval="4000">
+				<div class="carousel-inner" role="listbox">
+					<div style="height: 400px" class="carousel-item active">
+						<img class="d-block img-fluid" src="images/brazil.png">
+						<div class="carousel-caption">Brazil</div>
+					</div>
+					<div style="height: 400px" class="carousel-item">
+						<img class="d-block img-fluid" src="images/datsun.png">
+						<div class="carousel-caption">Datsun 260Z</div>
+					</div>
+					<div style="height: 400px" class="carousel-item">
+						<img class="d-block img-fluid" src="images/skydive.png">
+						<div class="carousel-caption">Skydive</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#gallery-carousel"
+					role="button" data-slide="prev"> 
+					<span class="carousel-control-prev-icon"
+					aria-hidden="true"></span>
+				</a> <a class="carousel-control-next" href="#gallery-carousel"
+					role="button" data-slide="next"> 
+					<span class="carousel-control-next-icon"
+					aria-hidden="true"></span>
+				</a>
+				<ol class="carousel-indicators">
+					<li data-target="#gallery-carousel" data-slide-to="0"
+						class="active"></li>
+					<li data-target="#gallery-carousel" data-slide-to="1"></li>
+					<li data-target="#gallery-carousel" data-slide-to="2"></li>
+				</ol>
+			</div>
 		</div>
 	</div>
 	<div class="container-fluid myphoto-section bg-myphoto-dark">
