@@ -12,9 +12,11 @@
 		crossorigin="anonymous">
 	
 	<link rel="stylesheet" type="text/css" href="styles/myphoto.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 
 <body data-spy="scroll" data-target=".navbar" >
+	<!-- navigation bar -->
 	<nav class="navbar navbar-expand-lg navbar-myphoto fixed-top">
 		<a class="navbar-brand" href="#">MyPhoto</a>
 		<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
@@ -34,18 +36,74 @@
 				<li class="nav-item"><a class="nav-link" href="#contact">
 						Contact Us</a></li>
 			</ul>
+			<ul class="navbar-nav pull-right">
+				<li class="nav-item dropdown "><a href="#"
+					class="nav-link dropdown-toggle" data-toggle="dropdown"
+					role="button" aria-haspopup="true" aria-expanded="false">
+						Profile <span class="caret"></span>
+				</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="#" data-toggle="modal"
+							data-target="#profile-modal"> Profile </a> <a
+							class="dropdown-item" href="#" data-toggle="modal"
+							data-target="#settings-modal"> 
+										<i class="fa fa-cogs"></i> Settings 
+						</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#"> Logout</a>
+					</div></li>
+			</ul>
 		</div>
 	</nav>
+	
+	
+	<!-- modal profile label -->
+	<div class="modal" id="profile-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+					<h4 class="modal-title" id="profile-modal-label">Profile</h4>
+				</div>
+				<div class="modal-body">Profile</div>
+			</div>
+		</div>
+	</div>
 
+	<!-- modal settings label -->
+	<div class="modal" id="settings-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+					<h4 class="modal-title" id="settings-modal-label">Settings</h4>
+				</div>
+				<div class="modal-body">Settings</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- welcome jumbotron -->
 	<div class="container-fluid myphoto-section jumbotron-welcome" id="welcome">
 		<div class="container">
 			<div class="jumbotron bg-myphoto-dark">
 				<h1>Welcome to MyPhoto</h1>
 				<p>Photographs you can cherish!</p>
 			</div>
+			<div class="alert alert-danger">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">
+						&times;</a>
+				<strong>THIS IS AN ALERT</strong>
+			</div>
+
 		</div>
 	</div>
 
+	<!-- navigation tabs -->
 	<div class="container-fluid myphoto-section bg-myphoto-dark" id="services">
 		<div class="container-fluid">
 			<div class="row">
@@ -194,6 +252,8 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- carousel -->
 	<div class="container-fluid myphoto-section bg-myphoto-light"
 		id="gallery">
 		<div class="container">
@@ -232,6 +292,8 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- card -->
 	<div class="container-fluid myphoto-section bg-myphoto-dark" id="about">
 		<div class="container">
 			<div class="row">
@@ -255,12 +317,26 @@
 			</div>
 		</div>
 	</div>
+	
 	<div class="container-fluid myphoto-section bg-myphoto-light" id="contact">
 		<div class="row">
 			<h3>Contact Us</h3>
 		</div>
 	</div>
-	<footer>Footer placeholder</footer>
+	
+	<!-- footer -->
+	<footer class="footer text-xs-center">
+		<p class="text-muted">
+			<small>&copy; MyPhoto Inc.</small>
+		</p>
+		<p class="text-muted">
+			<a href="#"><small>Terms &amp; Conditions</small> </a>
+		</p>
+		<p class="text-muted">
+			<a href="#gallery-carousel"><small>I want to see this carousel</small></a>
+		</p>
+	</footer>
+
 
 	<!-- 
 
@@ -514,7 +590,6 @@
 
 
  	-->
-
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous"></script>
@@ -527,5 +602,20 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 	<script src="jquery/jquery-3.3.1.js"></script>
+	
+	<!-- smooth scroll -->
+    <script type="text/javascript">
+    $( document ).ready(function() {
+      $(".nav-link").on('click', function(evt) {
+        evt.preventDefault();
+        var offset = $(this.hash).offset();
+        if (offset) {
+          $('html,body').animate({
+            scrollTop: offset.top
+          });
+        }
+      });
+    });
+    </script>
 </body>
 </html>
