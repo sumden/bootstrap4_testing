@@ -293,7 +293,7 @@
 		</div>
 	</div>
 	
-	<!-- card -->
+	<!-- card 
 	<div class="container-fluid myphoto-section bg-myphoto-dark" id="about">
 		<div class="container">
 			<div class="row">
@@ -317,13 +317,119 @@
 			</div>
 		</div>
 	</div>
+	-->
 	
-	<div class="container-fluid myphoto-section bg-myphoto-light" id="contact">
-		<div class="row">
-			<h3>Contact Us</h3>
+	<!--  media + quotes -->
+	<div class="container-fluid myphoto-section bg-myphoto-dark" id="about">
+		<div class="container">
+			<div class="row">
+				<h3>About</h3>
+				<div class="card bg-myphoto-light">
+					<div class="card-body">
+						<p>The style of photography will be customised to your
+							personal preference, as if being shot from your own eyes. You
+							will be part of every step of the photography process, to ensure
+							these photos feel like your own.</p>
+
+						<p>Our excellent photographers have many years of experience,
+							capturing moments from weddings to sporting events of absolute
+							quality.</p>
+
+						<p>MyPhoto also provides superb printing options of all shapes
+							and sizes, on any canvas, in any form. From large canvas prints
+							to personalised photo albums, MyPhoto provides it all.</p>
+
+						<p>MyPhoto provides a full, holistic solution for all your
+							photography needs.</p>
+
+						<blockquote class="blockquote">
+							<p>I am very motivated today.</p>
+							<footer class="blockquote-footer">
+								The Founder, <cite>Times Magazine</cite>
+							</footer>
+						</blockquote>
+
+						<div class="media">
+							<img class="mr-3" src="images/jason.jpg" alt="Jason">
+
+							<div class="media-body">
+								<h5 class="mt-0">Jason</h5>
+								Some text about Jason, our photographer. Aeterno meliore has ut,
+								sed ad nibh sadipscing accommodare. Tollit volumus mea id, sed
+								dicunt aliquando cu. Ea reque similique deseruisse duo. Est te
+								essent argumentum, mea et error tritani eleifend. Eum
+								appellantur intellegebat at, ne graece repudiandae
+								vituperatoribus duo.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	
+
+
+	<!-- form validation -->
+	<div class="container-fluid myphoto-section bg-myphoto-light"
+		id="contact">
+		<h3>Contact Us</h3>
+		<p>Lorem ipsum dolor sit amet, modo integre ad est, omittam
+			temporibus ex sit, dicam molestie eum ne. His ad nonumy mentitum
+			offendit, ea tempor timeam nec, doming latine liberavisse his ne. An
+			vix movet dolor. Ut pri qualisque reprehendunt, altera insolens
+			torquatos in per. Mei veri omnium omittam at, ea qui discere ceteros.
+		</p>
+		<p>Aeterno meliore has ut, sed ad nibh sadipscing accommodare.
+			Tollit volumus mea id, sed dicunt aliquando cu. Ea reque similique
+			deseruisse duo. Est te essent argumentum, mea et error tritani
+			eleifend. Eum appellantur intellegebat at, ne graece repudiandae
+			vituperatoribus duo.</p>
+		<p>Ut semper dicunt voluptatum est. Viris vivendum insolens eam
+			ea, his ne eirmod corpora volutpat. Mentitum molestiae eu sed, minim
+			dicit maiestatis duo et. Ad pri nusquam voluptaria. Pri wisi utroque
+			an.</p>
+		<style>
+				/*The following CSS fixes a Bootstrap 4 Beta bug, in which the 
+                invalid-feedback elements display incorrectly inside input groups. The
+                code may be removed when this bug is fixed in future releases. Solution taken from
+                https://github.com/twbs/bootstrap/issues/23454*/
+		.input-group {
+			flex-wrap: wrap !important;
+		}
+		
+		.input-group .invalid-feedback {
+			flex-basis: 100% !important;
+		}
+		</style>
+		<form class="was-validated" novalidate>
+			<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"><i class="fa fa-user"></i></span>
+				</div>
+				<input type="text" class="form-control is-invalid"
+					placeholder="Your name">
+				<div class="invalid-feedback">Please provide a name.</div>
+			</div>
+
+			<div class="form-group input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text"><i class="fa fa-at"></i></span>
+				</div>
+				<input type="text" class="form-control"
+					placeholder="Your email address">
+			</div>
+			<div class="form-group">
+				<label for="name">Your message</label>
+				<textarea class="form-control" rows="5" id="message"></textarea>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-success">
+					<i class="fa fa-send-o"></i> Send
+				</button>
+			</div>
+		</form>
+	</div>
+
 	<!-- footer -->
 	<footer class="footer text-xs-center">
 		<p class="text-muted">
